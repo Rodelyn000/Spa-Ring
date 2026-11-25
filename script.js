@@ -80,11 +80,37 @@ const SERVICES_FALLBACK = [
   }
 ];
 
-const THERAPISTS = Array.from({ length: 20 }, (_, i) => ({
-  id: String(i + 1),
-  name: `Therapist ${String(i + 1).padStart(2, "0")}`,
+const THERAPISTS = [
+  { id: "1", name: "Maria Santos", years: 8 },
+  { id: "2", name: "Angelica Reyes", years: 5 },
+  { id: "3", name: "Joanna Dela Cruz", years: 12 },
+  { id: "4", name: "Kristine Navarro", years: 3 },
+  { id: "5", name: "Rhea Villanueva", years: 9 },
+  { id: "6", name: "Patricia Mendoza", years: 15 },
+  { id: "7", name: "Jasmine Ramos", years: 4 },
+  { id: "8", name: "Carla Bautista", years: 7 },
+  { id: "9", name: "Lorna Aquino", years: 18 },
+  { id: "10", name: "Danica Flores", years: 2 },
+  { id: "11", name: "Marites Castillo", years: 14 },
+  { id: "12", name: "Bianca Garcia", years: 6 },
+  { id: "13", name: "Nicole Torres", years: 10 },
+  { id: "14", name: "Shiela Domingo", years: 11 },
+  { id: "15", name: "Angela Pascual", years: 13 },
+  { id: "16", name: "Mylene Aguilar", years: 16 },
+  { id: "17", name: "Camille Rivera", years: 5 },
+  { id: "18", name: "Evelyn Cruz", years: 20 },
+  { id: "19", name: "Hannah Lopez", years: 4 },
+  { id: "20", name: "Grace Fernandez", years: 9 }
+].map(therapist => ({
+  ...therapist,
   role: "Professional Spa Therapist"
 }));
+
+const yearsText = years =>
+  years === 1 ? "1 year experience" : `${years} years experience`;
+
+const initials = name =>
+  name.split(" ").map(part => part[0]).slice(0, 2).join("").toUpperCase();
 
 let services = [];
 
@@ -190,7 +216,7 @@ function renderBookingOptions() {
     '<option value="">Any available therapist</option>' +
     THERAPISTS.map(therapist => `
       <option value="${therapist.id}">
-        ${therapist.name}
+        ${escapeHTML(therapist.name)} — ${yearsText(therapist.years)}
       </option>
     `).join("");
 }
@@ -200,10 +226,11 @@ function renderTherapists() {
     THERAPISTS.map(therapist => `
       <article class="therapist-card">
         <div class="therapist-avatar">
-          ${therapist.id.padStart(2, "0")}
+          ${escapeHTML(initials(therapist.name))}
         </div>
-        <h3>${therapist.name}</h3>
-        <p>${therapist.role}</p>
+        <h3>${escapeHTML(therapist.name)}</h3>
+        <p>${escapeHTML(therapist.role)}</p>
+        <span class="therapist-exp">${yearsText(therapist.years)}</span>
       </article>
     `).join("");
 }

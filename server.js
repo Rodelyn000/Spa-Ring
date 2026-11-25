@@ -1,4 +1,3 @@
-
 "use strict";
 
 const http = require("http");
@@ -11,6 +10,29 @@ const ROOT = __dirname;
 const DATA = path.join(ROOT, "data");
 const BOOKINGS = path.join(DATA, "bookings.json");
 const SERVICES_FILE = path.join(ROOT, "services.json");
+
+const THERAPISTS = {
+  "1": "Maria Santos",
+  "2": "Angelica Reyes",
+  "3": "Joanna Dela Cruz",
+  "4": "Kristine Navarro",
+  "5": "Rhea Villanueva",
+  "6": "Patricia Mendoza",
+  "7": "Jasmine Ramos",
+  "8": "Carla Bautista",
+  "9": "Lorna Aquino",
+  "10": "Danica Flores",
+  "11": "Marites Castillo",
+  "12": "Bianca Garcia",
+  "13": "Nicole Torres",
+  "14": "Shiela Domingo",
+  "15": "Angela Pascual",
+  "16": "Mylene Aguilar",
+  "17": "Camille Rivera",
+  "18": "Evelyn Cruz",
+  "19": "Hannah Lopez",
+  "20": "Grace Fernandez"
+};
 
 const MIME_TYPES = {
   ".html": "text/html; charset=utf-8",
@@ -218,7 +240,7 @@ const server = http.createServer(async (req, res) => {
       }
 
       const therapistName = therapistId
-        ? `Therapist ${therapistId.padStart(2, "0")}`
+        ? THERAPISTS[therapistId]
         : "Any available therapist";
 
       const bookings = readJSON(BOOKINGS, []);

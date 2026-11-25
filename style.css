@@ -851,3 +851,14 @@ footer small {
     width: 100%;
   }
 }
+
+.therapist-exp {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 4px 12px;
+  background: var(--sage-light);
+  color: var(--forest);
+  border-radius: 20px;
+  font-size: .78rem;
+  font-weight: 700;
+}
