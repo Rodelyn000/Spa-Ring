@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#243a2d">
+  <title>SpaRing | Relax. Renew. Restore.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="SpaRing home">
+    <img src="logo/sparing-logo.png" alt="SpaRing Logo">
+    <span>Spa<strong>Ring</strong></span>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+  <nav id="mainNav">
+    <a href="#home" data-view="home">Home</a>
+    <a href="#services" data-view="services">Services</a>
+    <a href="#therapists" data-view="therapists">Therapists</a>
+    <a href="#booking" class="nav-book" data-view="booking">Book now</a>
+  </nav>
+</header>
+
+<main>
+  <section class="view active" id="homeView" data-page="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">WELCOME TO SPARING</p>
+        <h1>Your time to <em>unwind.</em></h1>
+        <p>Find your balance with thoughtful spa treatments, calming spaces, and caring professional therapists.</p>
+        <div class="hero-actions">
+          <a class="button" href="#services">Explore services</a>
+          <a class="button button-outline" href="#booking">Book an appointment</a>
+        </div>
+        <div class="hero-note"><span>✦</span> Relax. Renew. Restore.</div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=85" alt="Peaceful spa treatment room">
+      </div>
+    </section>
+
+    <section class="quick-stats">
+      <div><strong>20</strong><span>Professional therapists</span></div>
+      <div><strong>6+</strong><span>Relaxing treatments</span></div>
+      <div><strong>100%</strong><span>Focused on your comfort</span></div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">A LITTLE TIME FOR YOU</p>
+        <h2>Discover your kind of calm</h2>
+        <p>Choose a treatment and explore what makes it special.</p>
+      </div>
+      <div id="homeServices" class="service-grid"></div>
+      <div class="center">
+        <a class="text-link" href="#services">View all spa services →</a>
+      </div>
+    </section>
+
+    <section class="therapist-banner">
+      <div>
+        <p class="eyebrow">CARING HANDS, PERSONAL CARE</p>
+        <h2>Meet our team of 20 professional therapists.</h2>
+        <p>Our team is here to help you feel comfortable, cared for, and refreshed.</p>
+      </div>
+      <a class="button button-light" href="#therapists">Meet the therapists</a>
+    </section>
+  </section>
+
+  <section class="view" id="servicesView" data-page="services">
+    <section class="page-hero">
+      <p class="eyebrow">SPA RITUALS</p>
+      <h1>Our Spa Services</h1>
+      <p>Explore our treatments and choose the care that feels right for you.</p>
+    </section>
+    <section class="section section-top">
+      <div id="serviceLoading" class="loading">
+        <span class="spinner"></span> Loading spa services…
+      </div>
+      <div id="serviceGrid" class="service-grid"></div>
+      <p id="serviceError" class="message error" hidden></p>
+    </section>
+  </section>
+
+  <section class="view" id="detailView" data-page="detail">
+    <section class="section detail-section">
+      <button class="back-button" id="backToServices">← Back to services</button>
+      <div id="serviceDetail"></div>
+    </section>
+  </section>
+
+  <section class="view" id="therapistsView" data-page="therapists">
+    <section class="page-hero">
+      <p class="eyebrow">HERE FOR YOUR WELLBEING</p>
+      <h1>Our Professional Therapists</h1>
+      <p>A team of 20 caring professionals, ready to make your visit relaxing and personal.</p>
+    </section>
+    <section class="section">
+      <div class="team-intro">
+        <strong>20</strong>
+        <div>
+          <h2>Professional therapists</h2>
+          <p>Choose your preferred therapist during booking, or let us assign an available team member.</p>
+        </div>
+      </div>
+      <div class="therapist-grid" id="therapistGrid"></div>
+    </section>
+  </section>
+
+  <section class="view" id="bookingView" data-page="booking">
+    <section class="page-hero">
+      <p class="eyebrow">YOUR MOMENT OF CALM</p>
+      <h1>Book an Appointment</h1>
+      <p>Choose a spa service, view its price, and reserve a time that works for you.</p>
+    </section>
+
+    <section class="section booking-section">
+      <div class="booking-layout">
+        <form id="bookingForm" class="booking-card">
+          <h2>Your booking details</h2>
+          <p class="muted">All fields marked with * are required.</p>
+
+          <label>Full name *
+            <input name="name" required maxlength="80" autocomplete="name" placeholder="Your full name">
+          </label>
+
+          <label>Email address *
+            <input name="email" type="email" required maxlength="120" autocomplete="email" placeholder="you@example.com">
+          </label>
+
+          <label>Phone number *
+            <input name="phone" type="tel" required maxlength="30" autocomplete="tel" placeholder="+63 9XX XXX XXXX">
+          </label>
+
+          <label>Spa service *
+            <select name="service" id="bookingService" required>
+              <option value="">Choose a spa service</option>
+            </select>
+          </label>
+
+          <div class="selected-price" id="selectedPrice">
+            Select a service to see its price.
+          </div>
+
+          <label>Preferred therapist
+            <select name="therapist" id="bookingTherapist">
+              <option value="">Any available therapist</option>
+            </select>
+          </label>
+
+          <div class="form-row">
+            <label>Date *
+              <input name="date" id="bookingDate" type="date" required>
+            </label>
+            <label>Time *
+              <select name="time" id="bookingTime" required>
+                <option value="">Choose a time</option>
+              </select>
+            </label>
+          </div>
+
+          <label>Special requests (optional)
+            <textarea name="notes" rows="3" maxlength="300" placeholder="Anything we should know?"></textarea>
+          </label>
+
+          <button class="button submit-button" type="submit" id="submitBooking">Confirm booking</button>
+          <p class="form-message" id="bookingMessage" role="status"></p>
+        </form>
+
+        <aside class="booking-aside">
+          <h2>Our spa menu</h2>
+          <p class="muted">Select a treatment to add it to your booking.</p>
+          <div id="bookingMenu" class="booking-menu"></div>
+          <div class="aside-note">
+            <span>✦</span>
+            <p>Need help choosing? Our team can help you find a treatment that suits your needs.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer>
+  <a class="footer-brand" href="#home">Spa<strong>Ring</strong></a>
+  <p>Relax. Renew. Restore.</p>
+  <small>© <span id="year"></span> SpaRing. All rights reserved.</small>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

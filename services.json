@@ -1,0 +1,107 @@
+[
+  {
+    "id": "swedish-massage",
+    "name": "Swedish Massage",
+    "category": "Massage",
+    "price": 850,
+    "duration": "60 minutes",
+    "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80",
+    "short": "A soothing full-body massage to ease tension and encourage deep relaxation.",
+    "description": "Enjoy flowing massage strokes and gentle-to-medium pressure designed to help relax tired muscles, ease everyday tension, and leave you feeling refreshed.",
+    "benefits": [
+      "Encourages relaxation",
+      "Helps ease everyday muscle tension",
+      "A calming full-body experience"
+    ]
+  },
+  {
+    "id": "hot-stone",
+    "name": "Hot Stone Massage",
+    "category": "Massage",
+    "price": 1200,
+    "duration": "75 minutes",
+    "image": "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=80",
+    "short": "Warm stones and flowing massage techniques create a deeply calming ritual.",
+    "description": "Smooth, warmed stones are incorporated into a relaxing massage to create a comforting treatment for the body. Ideal when you want to slow down and unwind.",
+    "benefits": [
+      "Comforting warmth",
+      "Relaxing massage experience",
+      "A peaceful wellness ritual"
+    ]
+  },
+  {
+    "id": "aromatherapy",
+    "name": "Aromatherapy Massage",
+    "category": "Massage",
+    "price": 1000,
+    "duration": "60 minutes",
+    "image": "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=900&q=80",
+    "short": "A gentle massage paired with aromatic oils for a peaceful escape.",
+    "description": "A relaxing massage experience using aromatic oils and gentle techniques. Choose a quiet moment to recharge your senses and enjoy a calming spa ritual.",
+    "benefits": [
+      "Aromatic oil experience",
+      "Gentle relaxing techniques",
+      "Time to recharge"
+    ]
+  },
+  {
+    "id": "facial",
+    "name": "Refreshing Facial",
+    "category": "Skin Care",
+    "price": 750,
+    "duration": "45 minutes",
+    "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80",
+    "short": "A refreshing facial cleansing ritual to leave your skin feeling cared for.",
+    "description": "A gentle facial treatment featuring cleansing and moisturizing steps to refresh your skin. Your therapist will help tailor the experience to your comfort.",
+    "benefits": [
+      "Cleansing and moisturizing",
+      "A refreshing skin-care ritual",
+      "Personalized attention"
+    ]
+  },
+  {
+    "id": "body-scrub",
+    "name": "Body Scrub",
+    "category": "Body Care",
+    "price": 900,
+    "duration": "50 minutes",
+    "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80",
+    "short": "A body-care treatment with exfoliation to leave skin feeling smooth.",
+    "description": "Enjoy a body exfoliation treatment designed to buff away dull surface buildup and leave your skin feeling soft and smooth. Finished with a nourishing moisturizer.",
+    "benefits": [
+      "Exfoliation",
+      "Softer-feeling skin",
+      "Moisturizing finish"
+    ]
+  },
+  {
+    "id": "foot-reflexology",
+    "name": "Foot Reflexology",
+    "category": "Body Care",
+    "price": 600,
+    "duration": "40 minutes",
+    "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80",
+    "short": "A focused foot massage to help tired feet feel relaxed and refreshed.",
+    "description": "A focused foot treatment using comfortable pressure and massage techniques. A lovely choice after a long day on your feet.",
+    "benefits": [
+      "Focused foot massage",
+      "A relaxing break for tired feet",
+      "Comfortable pressure"
+    ]
+  },
+  {
+    "id": "manicure-pedicure",
+    "name": "Manicure & Pedicure",
+    "category": "Beauty",
+    "price": 650,
+    "duration": "60 minutes",
+    "image": "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=80",
+    "short": "A neat and relaxing nail-care session for hands and feet.",
+    "description": "A tidy, relaxing nail-care service that includes shaping, cuticle care, and polish. Enjoy a little self-care from fingertips to toes.",
+    "benefits": [
+      "Nail shaping and care",
+      "Hand and foot pampering",
+      "Polish finish"
+    ]
+  }
+]
